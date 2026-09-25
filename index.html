@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Il Tuo Nome</title>
+    <title>MyPortfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="script/main.js" defer></script>
 </head>
@@ -42,6 +42,8 @@
                                     role="tab"
                                     aria-selected="true"
                                     class="flex items-center gap-2 border-b-2 border-purple-400 px-3 py-2 text-sm font-medium text-purple-300 transition-colors hover:text-white"
+                                    onclick="switchtab('bio')"
+                                    id="bio-tab"
                             >
                                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 1114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
@@ -53,6 +55,8 @@
                                     role="tab"
                                     aria-selected="false"
                                     class="flex items-center gap-2 border-b-2 border-transparent px-3 py-2 text-sm font-medium text-purple-300/60 transition-colors hover:text-purple-200"
+                                    onclick="switchtab('contacts')"
+                                    id="contact-tab"
                             >
                                 <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
@@ -62,10 +66,7 @@
                         </div>
                     </div>
 
-                    <div role="tabpanel" class="mt-4">
-                        <p class="text-slate-300 text-sm leading-relaxed">
-                            I am a Software Engineer and researcher with a passion for data analysis, distributed systems, and modern software architectures. My background combines the methodological rigor of scientific analysis with the design of clean, efficient, and scalable code. I focus on turning complex datasets and theoretical models into concrete technological solutions, with a strong emphasis on performance optimization and sleek user experience.
-                        </p>
+                    <div role="tabpanel" class="mt-3 h-44 overflow-y-auto pr-1" id="content-panel">
                     </div>
                 </div>
 
@@ -76,63 +77,7 @@
                     <span class="inline-block shrink-0 pr-4 text-purple-200 font-semibold tracking-wider uppercase text-sm">Soft Skills</span>
                     <span class="h-px flex-1 bg-gradient-to-r from-purple-400 to-transparent"></span>
                 </div>
-                <div class="flex flex-wrap items-center gap-2.5 mt-4">
-                    <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 px-3 py-1 text-purple-200">
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C" class="size-4" />
-                      <span class="text-xs font-medium whitespace-nowrap">C</span>
-                    </span>
-                    <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 px-3 py-1 text-purple-200">
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" class="size-4" />
-                      <span class="text-xs font-medium whitespace-nowrap">C++</span>
-                    </span>
-                    <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 px-3 py-1 text-purple-200">
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="size-4" />
-                      <span class="text-xs font-medium whitespace-nowrap">Python</span>
-                    </span>
-                    <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 px-3 py-1 text-purple-200">
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="size-4" />
-                      <span class="text-xs font-medium whitespace-nowrap">JavaScript</span>
-                    </span>
-                    <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 px-3 py-1 text-purple-200">
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="size-4" />
-                      <span class="text-xs font-medium whitespace-nowrap">TypeScript</span>
-                    </span>
-                    <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 px-3 py-1 text-purple-200">
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="size-4" />
-                      <span class="text-xs font-medium whitespace-nowrap">HTML5</span>
-                    </span>
-                    <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 px-3 py-1 text-purple-200">
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" class="size-4" />
-                      <span class="text-xs font-medium whitespace-nowrap">CSS3</span>
-                    </span>
-                    <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 px-3 py-1 text-purple-200">
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS" class="size-4" />
-                      <span class="text-xs font-medium whitespace-nowrap">Tailwind CSS</span>
-                    </span>
-                    <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 px-3 py-1 text-purple-200">
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="size-4" />
-                      <span class="text-xs font-medium whitespace-nowrap">Git</span>
-                    </span>
-                    <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 px-3 py-1 text-purple-200">
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="size-4" />
-                      <span class="text-xs font-medium whitespace-nowrap">Docker</span>
-                    </span>
-                    <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 px-3 py-1 text-purple-200">
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="size-4" />
-                      <span class="text-xs font-medium whitespace-nowrap">Linux</span>
-                    </span>
-                    <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 px-3 py-1 text-purple-200">
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="size-4" />
-                      <span class="text-xs font-medium whitespace-nowrap">PostgreSQL</span>
-                    </span>
-                    <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 px-3 py-1 text-purple-200">
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" class="size-4" />
-                      <span class="text-xs font-medium whitespace-nowrap">Java</span>
-                    </span>
-                    <span class="inline-flex items-center justify-center gap-1.5 rounded-full bg-purple-950/60 border border-purple-500/30 px-3 py-1 text-purple-200">
-                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="size-4" />
-                      <span class="text-xs font-medium whitespace-nowrap">Node.js</span>
-                    </span>
+                <div class="flex flex-wrap items-center gap-2.5 mt-4" id="skill-tag">
                 </div>
             </div>
 
@@ -149,21 +94,21 @@
 
                         <div class="flex flex-wrap items-center gap-2 mb-1">
                             <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-purple-950/80 border border-purple-500/30 text-purple-300">
-                                2024 — Present
+                                2023 — Present
                             </span>
                             <span class="text-xs text-purple-300/60 uppercase tracking-wider font-mono">
-                                Work / Research
+                                Education
                             </span>
                         </div>
 
                         <h3 class="text-base font-semibold text-slate-100 mt-1">
-                            Software Engineer & Data Researcher
+                            Bachelor in Computer Science
                         </h3>
                         <p class="text-sm font-medium text-purple-300/80 mb-2">
-                            Company / Research Institute
+                            University of Turin
                         </p>
                         <p class="text-xs text-slate-300/80 leading-relaxed">
-                            Development of data analysis algorithms and distributed systems management.
+                            Specialization in distributed systems, algorithms, and network management.
                         </p>
                     </div>
 
@@ -172,21 +117,21 @@
 
                         <div class="flex flex-wrap items-center gap-2 mb-1">
                             <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-purple-950/80 border border-purple-500/30 text-purple-300">
-                                2021 — 2024
+                                Jan 2023 — May 2023
                             </span>
                             <span class="text-xs text-purple-300/60 uppercase tracking-wider font-mono">
-                                Education
+                                School Project
                             </span>
                         </div>
 
                         <h3 class="text-base font-semibold text-slate-100 mt-1">
-                            Bachelor in Computer Science / Engineering
+                           STEAM Project for managing IoT devices in real-time.
                         </h3>
                         <p class="text-sm font-medium text-purple-300/80 mb-2">
-                            University Name
+                            High School of Computer Science
                         </p>
                         <p class="text-xs text-slate-300/80 leading-relaxed">
-                            Specialization in distributed systems, algorithms, and software engineering.
+                            STEAM Project Assistant | Mentored elementary students in prototyping basic IoT devices with SAM Labs tools
                         </p>
                     </div>
 
@@ -206,10 +151,10 @@
                             High School Diploma in Computer Science
                         </h3>
                         <p class="text-sm font-medium text-purple-300/80 mb-2">
-                            University Name
+                            High School of Computer Science
                         </p>
                         <p class="text-xs text-slate-300/80 leading-relaxed">
-                            Specialization in distributed systems, algorithms, and software engineering.
+                            Focus on software development, networks, and computer systems fundamentals.
                         </p>
                     </div>
 
@@ -225,8 +170,8 @@
                         Selected Works
                     </h2>
                     <span class="text-[10px] font-mono tracking-widest uppercase px-2 py-0.5 rounded-full bg-purple-900/60 border border-purple-500/40 text-purple-300 shrink-0">
-                Portfolio
-            </span>
+                        Portfolio
+                    </span>
                 </div>
 
                 <div class="h-px w-full bg-gradient-to-r from-purple-400 via-purple-500/40 to-transparent mb-2"></div>
@@ -235,143 +180,88 @@
                     A curated showcase of research projects, open-source software, and web applications.
                 </p>
             </div>
-            <div class="w-full space-y-4">
-                <a href="https://github.com" target="_blank" class="block w-full p-5 bg-black/90 rounded-xl border border-purple-900/40 shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-500/60 hover:shadow-purple-900/20 group">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="size-2.5 rounded-full bg-purple-400 shadow-[0_0_8px_rgba(192,132,252,0.8)]"></span>
-                        <h3 class="text-base font-semibold text-slate-100 group-hover:text-purple-300 transition-colors">
-                            Algorithmic Data Pipeline
-                        </h3>
-                    </div>
 
-                    <div class="mb-4">
-                        <span class="text-xs font-semibold text-purple-300/80 uppercase tracking-wider block mb-0.5">Briefing:</span>
-                        <p class="text-xs text-slate-300/80 leading-relaxed">
-                            Sviluppo di un'architettura ad alte prestazioni per l'elaborazione e l'analisi in tempo reale di dataset complessi in ambiente distribuito.
-                        </p>
-                    </div>
+            <div class="relative z-30 flex gap-4 sm:gap-6 mb-4">
+                <details class="group relative">
+                    <summary
+                            class="flex items-center gap-2 border-b border-purple-500/30 pb-1 text-purple-200 transition-colors hover:border-purple-400 hover:text-white cursor-pointer [&::-webkit-details-marker]:hidden"
+                    >
+                        <p class="text-slate-300 text-sm leading-relaxed">Filters: </p>
+                        <span class="text-sm font-medium"> State </span>
 
-                    <div class="flex items-center gap-2 pt-3 border-t border-purple-950">
-                        <span class="text-xs font-semibold text-purple-300/80 uppercase tracking-wider">Status:</span>
-                        <div class="relative size-4 flex items-center justify-center">
-                            <svg class="size-full -rotate-90" viewBox="0 0 36 36">
-                                <path class="text-slate-800" stroke-width="4" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                <path class="text-emerald-700" stroke-width="4" stroke-dasharray="100, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <span class="transition-transform group-open:-rotate-180">
+                            <svg
+                                    aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="size-4"
+                            >
+                              <path
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                              />
                             </svg>
+                        </span>
+                    </summary>
+
+                    <div
+                            class="z-50 w-64 divide-y divide-purple-900/50 rounded-lg border border-purple-500/30 bg-slate-950/95 backdrop-blur-md shadow-xl group-open:absolute group-open:start-0 group-open:top-8"
+                    >
+                        <div class="flex items-center justify-between px-3 py-2">
+                            <span class="text-sm text-purple-200"> 0 Selected </span>
+
+                            <button
+                                    type="button"
+                                    class="text-sm text-purple-300/70 underline transition-colors hover:text-purple-100"
+                            >
+                                Reset
+                            </button>
                         </div>
 
-                        <span class="text-xs text-slate-300 font-mono">100% completed</span>
-                    </div>
-                </a>
-                <a href="https://github.com" target="_blank" class="block w-full p-5 bg-black/90 rounded-xl border border-purple-900/40 shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-500/60 hover:shadow-purple-900/20 group">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="size-2.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></span>
-                        <h3 class="text-base font-semibold text-slate-100 group-hover:text-purple-300 transition-colors">
-                            Distributed Graph Analytics
-                        </h3>
-                    </div>
+                        <fieldset class="p-3">
+                            <legend class="sr-only">Checkboxes</legend>
 
-                    <div class="mb-4">
-                        <span class="text-xs font-semibold text-purple-300/80 uppercase tracking-wider block mb-0.5">Briefing:</span>
-                        <p class="text-xs text-slate-300/80 leading-relaxed">
-                            Modellazione di algoritmi su grafi per l'analisi di reti sociali ad alta densità con supporto al calcolo parallelo.
-                        </p>
+                            <div class="flex flex-col items-start gap-3">
+                                <label for="Option1" class="inline-flex items-center gap-3 cursor-pointer">
+                                    <input
+                                            type="checkbox"
+                                            class="size-5 rounded border-purple-800/60 bg-purple-950/40 text-purple-600 focus:ring-purple-500/50 dark:border-purple-800/60 dark:bg-purple-950/40 dark:checked:bg-purple-600"
+                                            id="Option1"
+                                    />
+
+                                    <span class="text-sm font-medium text-purple-200"> Completed </span>
+                                </label>
+
+                                <label for="Option2" class="inline-flex items-center gap-3 cursor-pointer">
+                                    <input
+                                            type="checkbox"
+                                            class="size-5 rounded border-purple-800/60 bg-purple-950/40 text-purple-600 focus:ring-purple-500/50 dark:border-purple-800/60 dark:bg-purple-950/40 dark:checked:bg-purple-600"
+                                            id="Option2"
+                                    />
+
+                                    <span class="text-sm font-medium text-purple-200"> Reviewing </span>
+                                </label>
+
+                                <label for="Option3" class="inline-flex items-center gap-3 cursor-pointer">
+                                    <input
+                                            type="checkbox"
+                                            class="size-5 rounded border-purple-800/60 bg-purple-950/40 text-purple-600 focus:ring-purple-500/50 dark:border-purple-800/60 dark:bg-purple-950/40 dark:checked:bg-purple-600"
+                                            id="Option3"
+                                    />
+
+                                    <span class="text-sm font-medium text-purple-200"> Under Work </span>
+                                </label>
+                            </div>
+                        </fieldset>
                     </div>
+                </details>
+            </div>
 
-                    <div class="flex items-center gap-2 pt-3 border-t border-purple-950">
-                        <span class="text-xs font-semibold text-purple-300/80 uppercase tracking-wider">Status:</span>
-                        <div class="relative size-4 flex items-center justify-center">
-                            <svg class="size-full -rotate-90" viewBox="0 0 36 36">
-                                <path class="text-slate-800" stroke-width="4" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                <path class="text-green-400" stroke-width="4" stroke-dasharray="80, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                            </svg>
-                        </div>
-
-                        <span class="text-xs text-slate-300 font-mono">80% completed</span>
-                    </div>
-                </a>
-                <a href="https://github.com" target="_blank" class="block w-full p-5 bg-black/90 rounded-xl border border-purple-900/40 shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-500/60 hover:shadow-purple-900/20 group">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="size-2.5 rounded-full bg-pink-400 shadow-[0_0_8px_rgba(244,114,182,0.8)]"></span>
-                        <h3 class="text-base font-semibold text-slate-100 group-hover:text-purple-300 transition-colors">
-                            Neural Network Classifier
-                        </h3>
-                    </div>
-
-                    <div class="mb-4">
-                        <span class="text-xs font-semibold text-purple-300/80 uppercase tracking-wider block mb-0.5">Briefing:</span>
-                        <p class="text-xs text-slate-300/80 leading-relaxed">
-                            Sperimentazione su reti neurali convoluzionali per il riconoscimento di pattern visivi in immagini mediche.
-                        </p>
-                    </div>
-
-                    <div class="flex items-center gap-2 pt-3 border-t border-purple-950">
-                        <span class="text-xs font-semibold text-purple-300/80 uppercase tracking-wider">Status:</span>
-                        <div class="relative size-4 flex items-center justify-center">
-                            <svg class="size-full -rotate-90" viewBox="0 0 36 36">
-                                <path class="text-slate-800" stroke-width="4" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                <path class="text-orange-500" stroke-width="4" stroke-dasharray="50, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                            </svg>
-                        </div>
-
-                        <span class="text-xs text-slate-300 font-mono">50% completed</span>
-                    </div>
-                </a>
-                <a href="https://github.com" target="_blank" class="block w-full p-5 bg-black/90 rounded-xl border border-purple-900/40 shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-500/60 hover:shadow-purple-900/20 group">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="size-2.5 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(251,191,36,0.8)]"></span>
-                        <h3 class="text-base font-semibold text-slate-100 group-hover:text-purple-300 transition-colors">
-                            Quantum Computing Simulator
-                        </h3>
-                    </div>
-
-                    <div class="mb-4">
-                        <span class="text-xs font-semibold text-purple-300/80 uppercase tracking-wider block mb-0.5">Briefing:</span>
-                        <p class="text-xs text-slate-300/80 leading-relaxed">
-                            Libreria in Python/C++ per la simulazione di qubit e porte logiche quantistiche su architetture standard.
-                        </p>
-                    </div>
-
-                    <div class="flex items-center gap-2 pt-3 border-t border-purple-950">
-                        <span class="text-xs font-semibold text-purple-300/80 uppercase tracking-wider">Status:</span>
-                        <div class="relative size-4 flex items-center justify-center">
-                            <svg class="size-full -rotate-90" viewBox="0 0 36 36">
-                                <path class="text-slate-800" stroke-width="4" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                <path class="text-yellow-400" stroke-width="4" stroke-dasharray="30, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                            </svg>
-                        </div>
-
-                        <span class="text-xs text-slate-300 font-mono">30% completed</span>
-                    </div>
-                </a>
-                <a href="https://github.com" target="_blank" class="block w-full p-5 bg-black/90 rounded-xl border border-purple-900/40 shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-500/60 hover:shadow-purple-900/20 group">
-                    <div class="flex items-center gap-2 mb-2">
-                        <span class="size-2.5 rounded-full bg-red-400 shadow-[0_0_8px_rgba(248,113,113,0.8)]"></span>
-                        <h3 class="text-base font-semibold text-slate-100 group-hover:text-purple-300 transition-colors">
-                            Automated Code Review Bot
-                        </h3>
-                    </div>
-
-                    <div class="mb-4">
-                        <span class="text-xs font-semibold text-purple-300/80 uppercase tracking-wider block mb-0.5">Briefing:</span>
-                        <p class="text-xs text-slate-300/80 leading-relaxed">
-                            Bot per GitHub Action che analizza la qualità del codice e suggerisce refactoring in automatico tramite LLM.
-                        </p>
-                    </div>
-
-                    <div class="flex items-center gap-2 pt-3 border-t border-purple-950">
-                        <span class="text-xs font-semibold text-purple-300/80 uppercase tracking-wider">Status:</span>
-                        <div class="relative size-4 flex items-center justify-center">
-                            <svg class="size-full -rotate-90" viewBox="0 0 36 36">
-                                <path class="text-slate-800" stroke-width="4" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                <path class="text-red-500" stroke-width="4" stroke-dasharray="15, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                            </svg>
-                        </div>
-
-                        <span class="text-xs text-slate-300 font-mono">15% completed</span>
-                    </div>
-                </a>
-
+            <div class="relative z-10 w-full space-y-4" id="projects">
             </div>
         </div>
 

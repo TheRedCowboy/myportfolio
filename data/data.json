@@ -1,0 +1,33 @@
+{
+  "skills": [
+    {"name": "C", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg"},
+    {"name": "C++", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"},
+    {"name": "C#", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"},
+    {"name": "Python", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"},
+    {"name": "Java", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"},
+    {"name": "Haskell", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/haskell/haskell-original.svg"},
+    {"name": "RISC-V", "icon":"https://cdn.simpleicons.org/riscv/c084fc"},
+    {"name": "JavaScript", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"},
+    {"name": "HTML5", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"},
+    {"name": "CSS3", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"},
+    {"name": "Bootstrap", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"},
+    {"name": "Tailwind CSS", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"},
+    {"name": "React", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"},
+    {"name": "Node.js", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"},
+    {"name": "Express", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"},
+    {"name": "MySQL", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"},
+    {"name": "PostgreSQL", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"},
+    {"name": "MongoDB", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"},
+    {"name": "Git", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"},
+    {"name": "Docker", "icon":"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"},
+    {"name": "VirtualBox", "icon":"https://cdn.simpleicons.org/virtualbox/93c5fd"}
+  ],
+  "descriptors": [
+    {"name": "bio","text":"Cybersecurity student, my journey began back in 2014 when I first wrote C code in Dev C++. Since then, I’ve been driven by a constant passion for this ever-evolving field. I specialize in network infrastructure security, design, and maintenance, with a research focus on quantum networks. My expertise also extends to web applications and low-level development (e.g., kernel modules, device drivers)..."},
+    {"name": "linkedin", "text": "https://www.linkedin.com/in/samuele-zavettieri-0175933a4"},
+    {"name": "github", "text": "https://github.com/TheRedCowboy"}
+  ],
+  "projects": [
+    {"name": "Kathara Syn Flooding Script","description": "A really simple script that demonstrates a TCP SYN flooding attack in a Kathara network environment.","link": "https://github.com/TheRedCowboy/kathara-syn-flooding-script.git","state":"100","tag": "completed"}
+  ]
+}
