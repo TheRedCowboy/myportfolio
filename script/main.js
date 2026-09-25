@@ -47,7 +47,7 @@ async function switchtab(targetTab) {
     const activeClasses = ['border-purple-400', 'text-purple-300', 'hover:text-white'];
     const inactiveClasses = ['border-transparent', 'text-purple-300/60', 'hover:text-purple-200'];
 
-    const response = await fetch('../data/data.json');
+    const response = await fetch('./data/data.json');
     if (!response.ok) throw new Error("Error fetching data");
 
     const data = await response.json();
