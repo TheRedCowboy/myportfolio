@@ -106,7 +106,7 @@ async function switchtab(targetTab) {
 
 async function loadAllData() {
     try {
-        const response = await fetch('../data/data.json');
+        const response = await fetch('./data/data.json');
         if (!response.ok) throw new Error("Error fetching data");
 
         const data = await response.json();
