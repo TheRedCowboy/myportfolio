@@ -5,7 +5,7 @@ This is the code of my Personal Portfolio. So if you want take a look at it.Enjo
 
 ## 🚀 Live Demo
 
-Check out the live website: [https://<your-username>.github.io/<repository-name>/](https://theredcowboy.github.io/myportfolio/)
+Check out the live website: [https://"your-username".github.io/"repository-name"/](https://theredcowboy.github.io/myportfolio/)
 
 ---
 
