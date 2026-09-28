@@ -23,11 +23,11 @@
     {"name": "VirtualBox", "icon":"https://cdn.simpleicons.org/virtualbox/93c5fd"}
   ],
   "descriptors": [
-    {"name": "bio","text":"Cybersecurity student coding in C since 2014. Focused on network security, quantum networks, low-level dev (kernel/drivers), and web apps"},
+    {"name": "bio","text":"Cybersecurity student since 2014, when I wrote my first C code. Specialized in network infrastructure security and quantum networks research, with expertise spanning low-level development (kernel modules, drivers) and web applications."},
     {"name": "linkedin", "text": "https://www.linkedin.com/in/samuele-zavettieri-0175933a4"},
     {"name": "github", "text": "https://github.com/TheRedCowboy"}
   ],
   "projects": [
-    {"name": "Kathara Syn Flooding Script","description": "A really simple script that demonstrates a TCP SYN flooding attack in a Kathara network environment.","link": "https://github.com/TheRedCowboy/kathara-syn-flooding-script.git","state":"100","tag": "completed"}
+    {"name": "Kathara Syn Flooding Script","description": "A really simple script that demonstrates a TCP SYN flooding attack in a Kathara network environment.","link": "https://github.com/TheRedCowboy/kathara-syn-flooding-script.git","state":"100","tag": "Completed"}
   ]
 }

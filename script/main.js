@@ -10,6 +10,61 @@ window.addEventListener('load', () => {
 document.addEventListener('DOMContentLoaded', function () {
     loadAllData();
 
+    let allProjectsData = [];
+
+    fetch('data/data.json')
+        .then(response => response.json())
+        .then(data => {
+            allProjectsData = data.projects;
+            renderProjects(allProjectsData);
+        })
+        .catch(error => console.error("Error while loading projects:", error));
+
+
+    const checkboxCompleted = document.getElementById('Option1');
+    const checkboxReviewing = document.getElementById('Option2');
+    const checkboxUnderWork = document.getElementById('Option3');
+    const allCheckboxes = [checkboxCompleted, checkboxReviewing, checkboxUnderWork];
+
+    const selectedCountText = document.getElementById('selected');
+    const resetButton = document.querySelector('details button');
+
+
+    function applyFilters() {
+        const activeTags = [];
+
+        if (checkboxCompleted.checked) activeTags.push('completed');
+        if (checkboxReviewing.checked) activeTags.push('reviewing');
+        if (checkboxUnderWork.checked) activeTags.push('under work');
+
+        if (selectedCountText) {
+            selectedCountText.textContent = `${activeTags.length} Selected`;
+        }
+
+        let filteredProjects = allProjectsData;
+
+        if (activeTags.length > 0) {
+            filteredProjects = allProjectsData.filter(project => {
+                return activeTags.includes(project.tag.toLowerCase());
+            });
+        }
+
+        renderProjects(filteredProjects);
+    }
+
+    allCheckboxes.forEach(checkbox => {
+        if (checkbox) {
+            checkbox.addEventListener('change', applyFilters);
+        }
+    });
+
+    if (resetButton) {
+        resetButton.addEventListener('click', (e) => {
+            e.preventDefault();
+            allCheckboxes.forEach(cb => { if (cb) cb.checked = false; });
+            applyFilters();
+        });
+    }
 });
 
 
@@ -137,9 +192,42 @@ function renderProjects(projects) {
 
     if (!container) return;
 
+    container.innerHTML = '';
     var colors=["text-emerald-700","text-green-400","text-orange-500","text-yellow-400","text-red-500"]
 
-    container.innerHTML = projects.map(project => `
+    if(projects.length===0){
+        container.innerHTML = `<div class="mt-20"><svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="mx-auto size-20 text-gray-400"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"
+            />
+          </svg>
+        <h2 class="mt-6 text-2xl font-bold text-white-900 text-center">No data to display</h2></div>`;
+    }else{
+        container.innerHTML = projects.map(project => {
+            var percentage = parseInt(project.state, 10);
+            var colorIndex = 4;
+
+            if (percentage === 100) {
+                colorIndex = 0;
+            } else if (percentage >= 70 && percentage <= 90) {
+                colorIndex = 1;
+            } else if (percentage >= 50 && percentage <= 60) {
+                colorIndex = 3;
+            } else if (percentage >= 20 && percentage <= 40) {
+                colorIndex = 2;
+            }
+
+            return `
          <a href="${project.link}" target="_blank" class="block w-full p-5 bg-black/90 rounded-xl border border-purple-900/40 shadow-lg transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-500/60 hover:shadow-purple-900/20 group">
                     <div class="flex items-center gap-2 mb-2">
                         <span class="size-2.5 rounded-full bg-purple-400 shadow-[0_0_8px_rgba(192,132,252,0.8)]"></span>
@@ -160,21 +248,22 @@ function renderProjects(projects) {
                         <div class="relative size-4 flex items-center justify-center">
                             <svg class="size-full -rotate-90" viewBox="0 0 36 36">
                                 <path class="text-slate-800" stroke-width="4" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
-                                <path class="text-emerald-700" stroke-width="4" stroke-dasharray="${project.state}, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                <path class="${colors[colorIndex]}" stroke-width="4" stroke-dasharray="${project.state}, 100" stroke-linecap="round" stroke="currentColor" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
                             </svg>
                         </div>
 
                         <span class="text-xs text-slate-300 font-mono">${project.state}% completed</span>
                     </div>
-                    <div class="relative size-4 flex items-right justify-right mt-2">
+                    <div class="relative size-4 flex items-center justify-start mt-2">
                         <span style="color: #6366f1;">
                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
                             <line x1="4" y1="22" x2="4" y2="15"></line>
                           </svg>
                         </span>
-                        <p class="text-sm font-medium text-gray-500">${project.tag}</p>
+                        <p class="text-sm font-medium text-gray-500 ml-2 capitalize">${project.tag}</p>
                     </div>
                 </a>
-    `).join('');
+    `}).join('');
+    }
 }
